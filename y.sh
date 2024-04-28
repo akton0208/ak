@@ -1,0 +1,1 @@
+./xelis_luna_miner -m xel:q6t0qegngylzd0ssx45uq0nupekzwfg2r22sg4s79klxsvaragfqqpeg0vl
