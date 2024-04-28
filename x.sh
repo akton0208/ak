@@ -1,0 +1,1 @@
+./xelis-taxminer --host 107.174.0.234:8080 --wallet xel:q6t0qegngylzd0ssx45uq0nupekzwfg2r22sg4s79klxsvaragfqqpeg0vl --boost --worker test --display-hs-all
