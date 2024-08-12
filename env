@@ -1,0 +1,3 @@
+WALLET_PATH = "~/id.json"
+RPC_URL = "https://solana-mainnet.core.chainstack.com/c2ec83007a31d3c047e409f3b689699c"
+PASSWORD = "1111"
