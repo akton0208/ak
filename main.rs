@@ -156,25 +156,28 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let rpc_url = std::env::var("RPC_URL").expect("RPC_URL must be set.");
     let password = std::env::var("PASSWORD").expect("PASSWORD must be set.");
     let database_url = std::env::var("DATABASE_URL").expect("DATABASE_URL must be set.");
-    
-        // 你的現有挖礦邏輯
+
+    // 你的現有挖礦邏輯
     let miner_id = "your_miner_id";
     let result = "your_mining_result";
-    
-        if let Err(e) = submit_to_jito(miner_id, result).await {
+
+    // 提交結果到 Jito
+    if let Err(e) = submit_to_jito(miner_id, result).await {
         eprintln!("提交到 Jito 時出錯: {:?}", e);
     }
 
-    Ok(())
-}
-
+    // 確保其他邏輯在這裡執行
     let app_database = Arc::new(AppDatabase::new(database_url));
-
 
     let whitelist = if let Some(whitelist) = args.whitelist {
         let file = Path::new(&whitelist);
         if file.exists() {
             // load file
+        }
+    };
+
+    Ok(())
+}
             let mut pubkeys = HashSet::new();
             if let Ok(mut file) = tokio::fs::File::open(file).await {
                 let mut file_contents = String::new();
